@@ -10,13 +10,20 @@
 
 <body>
     <header>
-
+        <button>Save</button>
+        <button>Load</button>
+        <button>Page Font</button>
+        <button>Page Letter Size</button>
+        <p class="cols">Current Line Number 0 Current Column Index 0</p>
+        <button id="aTag">Print</button>
     </header>
-    <div class="paper-container">
-        <form method="post">
-            <textarea type="text" name="text"></textarea>
+    <div class="paper-container" id="print-content">
+        <form method="post" class="ttt">
+            <textarea type="text" name="text" onkeyup="getLineNumberAndColumnIndex(this);" onmouseup="this.onkeyup();" id="GFG_DOWN"></textarea>
+            <p class="printable"></p>
         </form>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

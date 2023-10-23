@@ -1,5 +1,5 @@
 html {
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 body {
@@ -10,7 +10,8 @@ body {
 
 header {
     width: 101%;
-    height: 10vh;
+    height: 5vh;
+    padding: 20px;
     /* margin-bottom: 1.5rem; */
     box-shadow: 0 0 25px 0 black;
     background-color: white;
@@ -23,22 +24,71 @@ header {
     display: flex;
     justify-content: center;
     margin-top: 6rem;
-
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
 }
 
 textarea {
     width: 620px;
-    height: 877px;
+    height: 740px;
     border: none;
     resize: none;
     box-shadow: 0 0 25px 0 black;
-    padding: 15px;
+    padding: 25px;
     outline: none;
     margin-bottom: 15px;
-    overflow: hidden;
+    /* overflow-x: hidden; */
+    font-family: inherit;
+    font-size: inherit;
+    /* text-size-adjust: none; */
+    max-width: 620px;
+    max-height: 740px;
 }
 
 textarea:active {
-    border:none;
+    border: none;
     outline: none;
+}
+
+
+@page {
+    size: A4;
+}
+
+
+@page :left {
+    margin-left: 2.54cm;
+}
+
+@page :right {
+    margin-left: 2.54cm;
+}
+
+
+@media print {
+    body {
+        visibility: hidden;
+    }
+
+    html,
+    body {
+        height: 100%;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .printable {
+        visibility: visible;
+        position: absolute;
+        /* display: block; */
+        left: 0;
+        top: 0;
+        box-shadow: none;
+        /* height: 100%;
+        max-height: 100%; */
+        /* overflow-y: visible; */
+        page-break-after: always;
+    }
 }
