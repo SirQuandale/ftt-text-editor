@@ -1,0 +1,44 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: rgb(16, 160, 189);
+    background: linear-gradient(90deg, rgba(16, 160, 189, 1) 0%, rgba(28, 28, 255, 1) 44%, rgba(0, 212, 255, 1) 100%);
+    overflow-x: hidden;
+}
+
+header {
+    width: 101%;
+    height: 10vh;
+    /* margin-bottom: 1.5rem; */
+    box-shadow: 0 0 25px 0 black;
+    background-color: white;
+    position: fixed;
+    margin-left: -1%;
+    margin-top: -1%;
+}
+
+.paper-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+
+}
+
+textarea {
+    width: 620px;
+    height: 877px;
+    border: none;
+    resize: none;
+    box-shadow: 0 0 25px 0 black;
+    padding: 15px;
+    outline: none;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+textarea:active {
+    border:none;
+    outline: none;
+}
